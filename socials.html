@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SOCIALS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Home</strong> <span></span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="qualification.html">Qualification</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="socials.html">Socials</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Contacts</h1>
+									</header>
+					<!-- Contact -->
+
+					<!-- Footer -->
+						<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://twitter.com/Im_korak" target="_blank" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="mailto:korakrg98@gmail.com" target="_blank" class="icon solid alt fa-envelope"><span class="label">Mail</span></a></li>
+								<li><a href="https://github.com/korakrg98" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/korak-royghatak-2571a7199/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+						</div>
+					</footer>
+
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" id="frmSubmit">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								   <div id="msg"></div>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="mailto:korakrg98@gmail.com">korakrg98@gmail.com</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>+91 7076982342</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>Ward No. 7,Gopinathpur,<br />
+										Chandrakona Town,Paschim Medinipur,<br />
+										PIN - 721201,West Bengal,India</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+		    	jQuery('#frmSubmit').on('submit',function(e){
+		    		e.preventDefault();
+		    		jQuery('#msg').html('Sending...');
+		    		jQuery('#btnSubmit').attr('disabled',true);
+		    		jQuery.ajax({
+		    			url:'https://script.google.com/macros/s/AKfycbz6OEmrSPZSXCcXGIAm3QCwhf5PEaw4TtCWf5G6mBlBhCGClHBKc_prX-TObK3PGzdP/exec',
+		    			type:'post',
+		    			data:jQuery('#frmSubmit').serialize(),
+		    			success:function(result){
+		    				jQuery('#frmSubmit')[0].reset();
+		    				jQuery('#msg').html('Message Sent');
+		    				jQuery('#btnSubmit').attr('disabled',false);
+		    				//window.location.href='';
+		    			}
+		    		});
+		    	});
+		    </script>
+
+	</body>
+</html>
